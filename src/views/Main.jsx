@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import * as React from "react";
 import ActivityFeed from "../components/ActivityFeed.jsx";
 import ArchivedCalls from "../components/ArchivedCalls.jsx";
 import NavBar from "../components/NavBar.jsx";
 
 const Main = () => {
-  const [selectedDisplay, setSelectedDisplay] = useState({
+  const [selectedDisplay, setSelectedDisplay] = React.useState({
     activityFeed: true,
     archivedCalls: false,
   });
-
-  const [callData, setCallData] = useState([]);
 
   return (
     <div>
