@@ -1,0 +1,87 @@
+.call-container {
+  padding: 15px;
+  max-height: 480px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.reset-calls {
+  border: 1px solid red;
+  color: red;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.date-text {
+  font-size: 14px;
+  color: '#4f4f4f';
+}
+
+.call-item-container {
+  display: flex;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 15px 10px;
+}
+
+.call-type-img {
+  margin-left: 2px;
+  height: 20px;
+  width: auto;
+}
+
+.call-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.caller-data {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+
+.caller-data p {
+  margin: 2px;
+}
+
+.call-number {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.call-info {
+  font-size: 12px;
+}
+
+.call-type {
+  font-size: 10px;
+  color: #555;
+}
+
+.call-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.call-date {
+  font-size: 10px;
+}
+
+.archive-icon {
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}
