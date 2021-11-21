@@ -1,9 +1,10 @@
-import * as React from "react";
-import "../css/navbar.css";
+import * as React from 'react';
+
+import '../css/navbar.css';
 
 const NavBar = (props) => {
   function toggleDisplay(input) {
-    if (input === "activity") {
+    if (input === 'activity') {
       props.setSelectedDisplay({ activityFeed: true, archivedCalls: false });
     } else {
       props.setSelectedDisplay({ activityFeed: false, archivedCalls: true });
@@ -15,13 +16,13 @@ const NavBar = (props) => {
       <ul className="navbar-list">
         <li
           className="navbar-list-item"
-          onClick={() => toggleDisplay("activity")}
+          onClick={() => toggleDisplay('activity')}
         >
           Activity Feed
         </li>
         <li
           className="navbar-list-item"
-          onClick={() => toggleDisplay("archive")}
+          onClick={() => toggleDisplay('archive')}
         >
           Archived Calls
         </li>

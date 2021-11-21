@@ -1,9 +1,15 @@
 import * as React from 'react';
-import { useCallData } from '../hooks/useCallData';
-import '../css/call.css';
 import axios from 'axios';
+
+import UnarchiveIcon from '@mui/icons-material/Unarchive';
+import CallIcon from '@mui/icons-material/Call';
+import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
+
+import { useCallData } from '../hooks/useCallData';
 import { getDate } from '../util/getDate';
 import { getTime } from '../util/getTime';
+
+import '../css/call.css';
 
 const ArchivedCalls = () => {
   const { callData, getCallData } = useCallData();
@@ -43,17 +49,9 @@ const ArchivedCalls = () => {
                   <div key={call.id} className="call-item-container">
                     <div className="call-direction">
                       {call.direction === 'inbound' ? (
-                        <img
-                          className="call-type-img"
-                          src="public/incomming-call.png"
-                          alt="incomming call icon"
-                        />
+                        <PhoneCallbackIcon />
                       ) : (
-                        <img
-                          className="call-type-img"
-                          src="public/outgoing-call.png"
-                          alt="outgoing call icon"
-                        />
+                        <CallIcon />
                       )}
                     </div>
                     <div className="caller-data">
@@ -70,11 +68,9 @@ const ArchivedCalls = () => {
                     <div className="call-date-container">
                       <p className="call-date">{getTime(call.created_at)}</p>
 
-                      <img
-                        onClick={() => updateCall(call.id, false)}
+                      <UnarchiveIcon
+                        onClick={() => updateCall(call.id, true)}
                         className="archive-icon"
-                        src="public/archive-filled-box.png"
-                        alt="archive icon"
                       />
                     </div>
                   </div>
